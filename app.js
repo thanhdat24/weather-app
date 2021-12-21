@@ -39,7 +39,14 @@ app.get("/", async (req, res) => {
   const location = params.address;
   const weather = await getWeather(location);
   console.log(weather);
-  res.render("weather");
+  res.render("weather", {
+    region: weather.region,
+    country: weather.country,
+    temperature: weather.temperature,
+    wind_speed: weather.wind_speed,
+    precip: weather.precip,
+    cloudcover: weather.cloudcover,
+  });
 });
 
 app.set("view engine", "hbs");

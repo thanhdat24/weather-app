@@ -33,22 +33,22 @@
         <div class="weather__content text-center">
           <h1 class="title">Cyber Weather</h1>
           <section class="search">
-            <h1 class="place" id="place">Kanagawa</h1>
-            <h2 class="country" id="country">Japan</h2>
-            <p class="temperature" id="temperature">18°C</p>
+            <h1 class="place" id="place">{{region}}</h1>
+            <h2 class="country" id="country">{{country}}</h2>
+            <p class="temperature" id="temperature">{{temperature}}°C</p>
             <div class="container">
               <div class="row">
                 <div class="col-4">
                   <i class="fa fa-wind icon"></i>
-                  <p class="result" id="wind">33</p>
+                  <p class="result" id="wind">{{wind_speed}}</p>
                 </div>
                 <div class="col-4">
                   <i class="fa fa-cloud-rain icon"></i>
-                  <p class="result" id="rain">0</p>
+                  <p class="result" id="rain">{{precip}}</p>
                 </div>
                 <div class="col-4">
                   <i class="fa fa-cloud icon"></i>
-                  <p class="result" id="cloud">0</p>
+                  <p class="result" id="cloud">{{cloudcover}}</p>
                 </div>
               </div>
             </div>
