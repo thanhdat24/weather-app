@@ -32,50 +32,78 @@
       <div class="weather">
         <div class="weather__content text-center">
           <h1 class="title">Cyber Weather</h1>
-          <section class="search">
-            <h1 class="place" id="place">{{region}}</h1>
-            <h2 class="country" id="country">{{country}}</h2>
-            <p class="temperature" id="temperature">{{temperature}}°C</p>
-            <div class="container">
-              <div class="row">
-                <div class="col-4">
-                  <i class="fa fa-wind icon"></i>
-                  <p class="result" id="wind">{{wind_speed}}</p>
-                </div>
-                <div class="col-4">
-                  <i class="fa fa-cloud-rain icon"></i>
-                  <p class="result" id="rain">{{precip}}</p>
-                </div>
-                <div class="col-4">
-                  <i class="fa fa-cloud icon"></i>
-                  <p class="result" id="cloud">{{cloudcover}}</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <form action="/" class="form-search container">
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    name="address"
-                    class="form-control input-search"
-                    placeholder="Vị Trí"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-                  />
-                  <div class="input-group-append">
-                    <button
-                      class="btn btn-outline-secondary btn-search"
-                      type="submit"
-                      id="search"
-                    >
-                      Tìm Kiếm
-                    </button>
+          {{#if status}}
+            <section class="search">
+              <h1 class="place" id="place">{{region}}</h1>
+              <h2 class="country" id="country">{{country}}</h2>
+              <p class="temperature" id="temperature">{{temperature}}°C</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col-4">
+                    <i class="fa fa-wind icon"></i>
+                    <p class="result" id="wind">{{wind_speed}}</p>
+                  </div>
+                  <div class="col-4">
+                    <i class="fa fa-cloud-rain icon"></i>
+                    <p class="result" id="rain">{{precip}}</p>
+                  </div>
+                  <div class="col-4">
+                    <i class="fa fa-cloud icon"></i>
+                    <p class="result" id="cloud">{{cloudcover}}</p>
                   </div>
                 </div>
-              </form>
-            </div>
-          </section>
+              </div>
+              <div>
+                <form action="/" class="form-search container">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      name="address"
+                      class="form-control input-search"
+                      placeholder="Vị Trí"
+                      aria-label="Recipient's username"
+                      aria-describedby="basic-addon2"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline-secondary btn-search"
+                        type="submit"
+                        id="search"
+                      >
+                        Tìm Kiếm
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          {{else}}
+            <section class="not-search">
+              <div>
+                <form action="/" class="form-search container">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      name="address"
+                      class="form-control input-search"
+                      placeholder="Vị Trí"
+                      aria-label="Recipient's username"
+                      aria-describedby="basic-addon2"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline-secondary btn-search"
+                        type="submit"
+                        id="search"
+                      >
+                        Tìm Kiếm
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          {{/if}}
         </div>
       </div>
     </div>
