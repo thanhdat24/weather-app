@@ -21,6 +21,7 @@
   "dependencies": {
     "async-request": "^1.2.0",
     "express": "^4.17.2",
+    "hbs": "^4.2.0",
     "nodemon": "^2.0.15"
   }
 }
